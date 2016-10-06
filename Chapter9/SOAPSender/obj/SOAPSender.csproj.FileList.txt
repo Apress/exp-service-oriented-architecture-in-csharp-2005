@@ -1,0 +1,6 @@
+obj\Debug\WSStockTraderClient.exe
+obj\Debug\WSStockTraderClient.pdb
+bin\Debug\WSStockTraderClient.exe
+bin\Debug\WSStockTraderClient.pdb
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\WSStockTraderClient.exe.config

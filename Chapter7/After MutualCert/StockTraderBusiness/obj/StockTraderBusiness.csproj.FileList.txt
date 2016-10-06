@@ -1,0 +1,7 @@
+bin\Debug\StockTraderBusiness.dll
+bin\Debug\StockTraderBusiness.pdb
+bin\Debug\StockTraderTypes.dll
+bin\Debug\StockTraderTypes.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\StockTraderBusiness.dll
+obj\Debug\StockTraderBusiness.pdb

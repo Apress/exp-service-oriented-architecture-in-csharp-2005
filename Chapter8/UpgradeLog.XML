@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="WSSecureConversation">
+</Property><Property Name="Solution File" Value="C:\Projects\APress\Source\Chapter7\WSSecureConversation.sln">
+</Property><Property Name="Date" Value="Saturday, February 25, 2006">
+</Property><Property Name="Time" Value="21:42 PM">
+</Property></Properties><Event ErrorLevel="0" Project="StockTraderTypes" Source="StockTraderTypes\StockTraderTypes.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="StockTraderTypes" Source="StockTraderTypes\StockTraderTypes.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="WSSecureConvClient" Source="WSSecureConvClient\WSSecureConvClient.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="WSSecureConvClient" Source="WSSecureConvClient\WSSecureConvClient.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="WSSecureConversation.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="WSSecureConversation.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="WSSecureConvService.csproj" Source="WSSecureConvService.csproj" Description="Converted.&#xA;There may be some unresolved conversion issues you will need to manually fix. For more information, please refer to http://go.microsoft.com/fwlink/?LinkId=46995 or search for the help topic &quot;Converting from Visual Studio .NET 2002 or 2003&quot;.">
+</Event><Event ErrorLevel="3" Project="WSSecureConvService.csproj" Source="WSSecureConvService.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="StockTraderTypes" Source="StockTraderTypes\StockTraderTypes.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="WSSecureConvClient" Source="WSSecureConvClient\WSSecureConvClient.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

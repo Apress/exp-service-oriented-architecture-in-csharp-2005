@@ -1,0 +1,6 @@
+obj\Debug\StockTraderSoapClientConsole.exe
+obj\Debug\StockTraderSoapClientConsole.pdb
+bin\Debug\StockTraderSoapClientConsole.exe
+bin\Debug\StockTraderSoapClientConsole.pdb
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\StockTraderSoapClientConsole.exe.config

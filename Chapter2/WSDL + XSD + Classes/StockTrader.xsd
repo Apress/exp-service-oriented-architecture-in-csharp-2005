@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="StockTrader" targetNamespace="http://www.bluestonepartners.com/Schemas/StockTrader/"
+	elementFormDefault="qualified" xmlns="http://www.bluestonepartners.com/Schemas/StockTrader/"
+	xmlns:mstns="http://www.bluestonepartners.com/Schemas/StockTrader/" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	version="1.0">
+	<xs:complexType name="Quote">
+		<xs:sequence>
+			<xs:element name="Symbol" type="xs:string" />
+			<xs:element name="Company" type="xs:string" />
+			<xs:element name="DateTime" type="xs:string" />
+			<xs:element name="High" type="xs:double" />
+			<xs:element name="Low" type="xs:double" />
+			<xs:element name="Open" type="xs:double" />
+			<xs:element name="Last" type="xs:double" />
+			<xs:element name="Change" type="xs:double" />
+			<xs:element name="PercentChange" type="xs:double" />
+			<xs:element name="Previous_Close" type="xs:double" />
+			<xs:element name="High_52_Week" type="xs:double" />
+			<xs:element name="Low_52_Week" type="xs:double"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Trade">
+		<xs:sequence>
+			<xs:element name="TradeID" type="xs:string" />
+			<xs:element name="Symbol" type="xs:string" />
+			<xs:element name="Price" type="xs:double" />
+			<xs:element name="Shares" type="xs:int" />
+			<xs:element name="tradeType" type="TradeType" />
+			<xs:element name="tradeStatus" type="TradeStatus" />
+			<xs:element name="OrderDateTime" type="xs:string" />
+			<xs:element name="LastActivityDateTime" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TradeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Bid" />
+			<xs:enumeration value="Ask" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TradeStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Ordered" />
+			<xs:enumeration value="Filled" />
+			<xs:enumeration value="Cancelled" />
+			<xs:enumeration value="Unfilled" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Trades">
+		<xs:sequence>
+			<xs:element name="Account" type="xs:string" />
+			<xs:element name="Bids" type="ArrayOfTrade" />
+			<xs:element name="Asks" type="ArrayOfTrade" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ArrayOfTrade">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="Trade" nillable="true" type="Trade" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Account" type="xs:string"></xs:element>
+	<xs:element name="Symbol" type="xs:string"></xs:element>
+	<xs:element name="Shares" type="xs:int"></xs:element>
+	<xs:element name="Price" type="xs:double"></xs:element>
+	<xs:element name="tradeType" type="TradeType"></xs:element>
+	<xs:element name="TradeID" type="xs:string"></xs:element>
+	<xs:element name="Quote" type="Quote"></xs:element>
+	<xs:element name="Trades" type="Trades"></xs:element>
+	<xs:element name="Trade" type="Trade"></xs:element>
+</xs:schema>

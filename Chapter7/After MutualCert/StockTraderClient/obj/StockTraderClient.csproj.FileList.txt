@@ -1,0 +1,7 @@
+bin\Debug\StockTraderClient.exe
+bin\Debug\StockTraderClient.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\StockTraderClient.exe
+obj\Debug\StockTraderClient.pdb
+bin\Debug\StockTraderClient.exe.config
+bin\Debug\wse3policyCache.config

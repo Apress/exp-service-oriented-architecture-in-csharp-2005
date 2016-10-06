@@ -1,0 +1,8 @@
+bin\Debug\StockTraderClient.exe.config
+obj\Debug\StockTraderClient.exe
+obj\Debug\StockTraderClient.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\StockTraderClient.StockTraderClient.resources
+obj\Debug\StockTraderClient.csproj.GenerateResource.Cache
+bin\Debug\StockTraderClient.exe
+bin\Debug\StockTraderClient.pdb

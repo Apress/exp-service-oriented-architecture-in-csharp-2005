@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf8" ?> 
+ <wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.bluestonepartners.com/schemas/StockTrader/" xmlns:s1="http://www.bluestonepartners.com/Schemas/StockTrader/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.bluestonepartners.com/schemas/StockTrader/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+ <wsdl:types>
+ <s:schema elementFormDefault="qualified" targetNamespace="http://www.bluestonepartners.com/schemas/StockTrader/">
+  <s:import namespace="http://www.bluestonepartners.com/Schemas/StockTrader/" /> 
+ <s:element name="RequestQuote">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="Symbol" type="s:string" /> 
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="RequestQuoteResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="Quote" type="s1:Quote" /> 
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="PlaceTrade">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" /> 
+  <s:element minOccurs="0" maxOccurs="1" name="Symbol" type="s:string" /> 
+  <s:element minOccurs="1" maxOccurs="1" name="Shares" type="s:int" /> 
+  <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:double" /> 
+  <s:element minOccurs="1" maxOccurs="1" name="tradeType" type="s1:TradeType" /> 
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="PlaceTradeResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="Trade" type="s1:Trade" /> 
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="RequestTradeDetails">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" /> 
+  <s:element minOccurs="0" maxOccurs="1" name="TradeID" type="s:string" /> 
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="RequestTradeDetailsResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="Trade" type="s1:Trade" /> 
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="RequestAllTradesSummary">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" /> 
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="RequestAllTradesSummaryResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="Trades" type="s1:Trades" /> 
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:schema>
+ <s:schema elementFormDefault="qualified" targetNamespace="http://www.bluestonepartners.com/Schemas/StockTrader/">
+ <s:complexType name="Quote">
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="Symbol" type="s:string" /> 
+  <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" /> 
+  <s:element minOccurs="0" maxOccurs="1" name="DateTime" type="s:string" /> 
+  <s:element minOccurs="1" maxOccurs="1" name="High" type="s:double" /> 
+  <s:element minOccurs="1" maxOccurs="1" name="Low" type="s:double" /> 
+  <s:element minOccurs="1" maxOccurs="1" name="Open" type="s:double" /> 
+  <s:element minOccurs="1" maxOccurs="1" name="Last" type="s:double" /> 
+  <s:element minOccurs="1" maxOccurs="1" name="Change" type="s:double" /> 
+  <s:element minOccurs="1" maxOccurs="1" name="PercentChange" type="s:double" /> 
+  <s:element minOccurs="1" maxOccurs="1" name="Previous_Close" type="s:double" /> 
+  <s:element minOccurs="1" maxOccurs="1" name="High_52_Week" type="s:double" /> 
+  <s:element minOccurs="1" maxOccurs="1" name="Low_52_Week" type="s:double" /> 
+  </s:sequence>
+  </s:complexType>
+ <s:simpleType name="TradeType">
+ <s:restriction base="s:string">
+  <s:enumeration value="Bid" /> 
+  <s:enumeration value="Ask" /> 
+  </s:restriction>
+  </s:simpleType>
+ <s:complexType name="Trade">
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="TradeID" type="s:string" /> 
+  <s:element minOccurs="0" maxOccurs="1" name="Symbol" type="s:string" /> 
+  <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:double" /> 
+  <s:element minOccurs="1" maxOccurs="1" name="Shares" type="s:int" /> 
+  <s:element minOccurs="1" maxOccurs="1" name="tradeType" type="s1:TradeType" /> 
+  <s:element minOccurs="1" maxOccurs="1" name="tradeStatus" type="s1:TradeStatus" /> 
+  <s:element minOccurs="0" maxOccurs="1" name="OrderDateTime" type="s:string" /> 
+  <s:element minOccurs="0" maxOccurs="1" name="LastActivityDateTime" type="s:string" /> 
+  </s:sequence>
+  </s:complexType>
+ <s:simpleType name="TradeStatus">
+ <s:restriction base="s:string">
+  <s:enumeration value="Ordered" /> 
+  <s:enumeration value="Filled" /> 
+  <s:enumeration value="Cancelled" /> 
+  <s:enumeration value="Unfilled" /> 
+  </s:restriction>
+  </s:simpleType>
+ <s:complexType name="Trades">
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" /> 
+  <s:element minOccurs="0" maxOccurs="1" name="Bids" type="s1:ArrayOfTrade" /> 
+  <s:element minOccurs="0" maxOccurs="1" name="Asks" type="s1:ArrayOfTrade" /> 
+  </s:sequence>
+  </s:complexType>
+ <s:complexType name="ArrayOfTrade">
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="unbounded" name="Trade" nillable="true" type="s1:Trade" /> 
+  </s:sequence>
+  </s:complexType>
+  </s:schema>
+  </wsdl:types>
+ <wsdl:message name="RequestQuoteSoapIn">
+  <wsdl:part name="parameters" element="tns:RequestQuote" /> 
+  </wsdl:message>
+ <wsdl:message name="RequestQuoteSoapOut">
+  <wsdl:part name="parameters" element="tns:RequestQuoteResponse" /> 
+  </wsdl:message>
+ <wsdl:message name="PlaceTradeSoapIn">
+  <wsdl:part name="parameters" element="tns:PlaceTrade" /> 
+  </wsdl:message>
+ <wsdl:message name="PlaceTradeSoapOut">
+  <wsdl:part name="parameters" element="tns:PlaceTradeResponse" /> 
+  </wsdl:message>
+ <wsdl:message name="RequestTradeDetailsSoapIn">
+  <wsdl:part name="parameters" element="tns:RequestTradeDetails" /> 
+  </wsdl:message>
+ <wsdl:message name="RequestTradeDetailsSoapOut">
+  <wsdl:part name="parameters" element="tns:RequestTradeDetailsResponse" /> 
+  </wsdl:message>
+ <wsdl:message name="RequestAllTradesSummarySoapIn">
+  <wsdl:part name="parameters" element="tns:RequestAllTradesSummary" /> 
+  </wsdl:message>
+ <wsdl:message name="RequestAllTradesSummarySoapOut">
+  <wsdl:part name="parameters" element="tns:RequestAllTradesSummaryResponse" /> 
+  </wsdl:message>
+ <wsdl:portType name="StockTraderSoap">
+ <wsdl:operation name="RequestQuote">
+  <wsdl:input message="tns:RequestQuoteSoapIn" /> 
+  <wsdl:output message="tns:RequestQuoteSoapOut" /> 
+  </wsdl:operation>
+ <wsdl:operation name="PlaceTrade">
+  <wsdl:input message="tns:PlaceTradeSoapIn" /> 
+  <wsdl:output message="tns:PlaceTradeSoapOut" /> 
+  </wsdl:operation>
+ <wsdl:operation name="RequestTradeDetails">
+  <wsdl:input message="tns:RequestTradeDetailsSoapIn" /> 
+  <wsdl:output message="tns:RequestTradeDetailsSoapOut" /> 
+  </wsdl:operation>
+ <wsdl:operation name="RequestAllTradesSummary">
+  <wsdl:input message="tns:RequestAllTradesSummarySoapIn" /> 
+  <wsdl:output message="tns:RequestAllTradesSummarySoapOut" /> 
+  </wsdl:operation>
+  </wsdl:portType>
+ <wsdl:binding name="StockTraderSoap" type="tns:StockTraderSoap">
+  <soap:binding transport="http://schemas.xmlsoap.org/soap/http" /> 
+ <wsdl:operation name="RequestQuote">
+  <soap:operation soapAction="http://www.bluestonepartners.com/schemas/StockTrader/RequestQuote" style="document" /> 
+ <wsdl:input>
+  <soap:body use="literal" /> 
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" /> 
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="PlaceTrade">
+  <soap:operation soapAction="http://www.bluestonepartners.com/schemas/StockTrader/PlaceTrade" style="document" /> 
+ <wsdl:input>
+  <soap:body use="literal" /> 
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" /> 
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="RequestTradeDetails">
+  <soap:operation soapAction="http://www.bluestonepartners.com/schemas/StockTrader/RequestTradeDetails" style="document" /> 
+ <wsdl:input>
+  <soap:body use="literal" /> 
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" /> 
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="RequestAllTradesSummary">
+  <soap:operation soapAction="http://www.bluestonepartners.com/schemas/StockTrader/RequestAllTradesSummary" style="document" /> 
+ <wsdl:input>
+  <soap:body use="literal" /> 
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" /> 
+  </wsdl:output>
+  </wsdl:operation>
+  </wsdl:binding>
+ <wsdl:binding name="StockTraderSoap12" type="tns:StockTraderSoap">
+  <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" /> 
+ <wsdl:operation name="RequestQuote">
+  <soap12:operation soapAction="http://www.bluestonepartners.com/schemas/StockTrader/RequestQuote" style="document" /> 
+ <wsdl:input>
+  <soap12:body use="literal" /> 
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" /> 
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="PlaceTrade">
+  <soap12:operation soapAction="http://www.bluestonepartners.com/schemas/StockTrader/PlaceTrade" style="document" /> 
+ <wsdl:input>
+  <soap12:body use="literal" /> 
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" /> 
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="RequestTradeDetails">
+  <soap12:operation soapAction="http://www.bluestonepartners.com/schemas/StockTrader/RequestTradeDetails" style="document" /> 
+ <wsdl:input>
+  <soap12:body use="literal" /> 
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" /> 
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="RequestAllTradesSummary">
+  <soap12:operation soapAction="http://www.bluestonepartners.com/schemas/StockTrader/RequestAllTradesSummary" style="document" /> 
+ <wsdl:input>
+  <soap12:body use="literal" /> 
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" /> 
+  </wsdl:output>
+  </wsdl:operation>
+  </wsdl:binding>
+ <wsdl:service name="StockTrader">
+ <wsdl:port name="StockTraderSoap" binding="tns:StockTraderSoap">
+  <soap:address location="http://localhost/StockTrader/StockTrader.asmx" /> 
+  </wsdl:port>
+ <wsdl:port name="StockTraderSoap12" binding="tns:StockTraderSoap12">
+  <soap12:address location="http://localhost/StockTrader/StockTrader.asmx" /> 
+  </wsdl:port>
+  </wsdl:service>
+  </wsdl:definitions>

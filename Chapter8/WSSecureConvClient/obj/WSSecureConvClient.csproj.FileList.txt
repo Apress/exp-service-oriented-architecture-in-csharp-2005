@@ -1,0 +1,4 @@
+bin\Debug\WSSecureConvClient.exe.config
+obj\Debug\WSSecureConvClient.exe
+obj\Debug\WSSecureConvClient.pdb
+obj\Debug\ResolveAssemblyReference.cache

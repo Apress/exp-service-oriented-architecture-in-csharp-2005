@@ -1,0 +1,40 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "http://localhost/StockTrader/", "http://localhost/StockTrader", "{9CA50C25-AF4E-41FA-8E54-0BF98EFF6F0E}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/StockTrader"
+		Debug.AspNetCompiler.PhysicalPath = "StockTrader\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\StockTrader\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/StockTrader"
+		Release.AspNetCompiler.PhysicalPath = "StockTrader\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\StockTrader\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "StockTrader\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockTraderClient", "StockTraderClient\StockTraderClient.csproj", "{DD43E55B-F0EE-42EB-8FBC-D8D905AC542F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CA50C25-AF4E-41FA-8E54-0BF98EFF6F0E}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{9CA50C25-AF4E-41FA-8E54-0BF98EFF6F0E}.Release|Any CPU.ActiveCfg = Release|.NET
+		{DD43E55B-F0EE-42EB-8FBC-D8D905AC542F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD43E55B-F0EE-42EB-8FBC-D8D905AC542F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD43E55B-F0EE-42EB-8FBC-D8D905AC542F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD43E55B-F0EE-42EB-8FBC-D8D905AC542F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
